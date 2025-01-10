@@ -1,3 +1,7 @@
+Este código é um utilitário em Python para desinstalar todos os pacotes Python instalados no ambiente atual e limpar o cache do pip. Ele é especialmente útil para redefinir ambientes de desenvolvimento ou liberar espaço em disco.
+
+---
+
 ### Descrição do Código
 
 #### Objetivo
