@@ -1,43 +1,43 @@
-Este código é um utilitário em Python para desinstalar todos os pacotes Python instalados no ambiente atual e limpar o cache do pip. Ele é especialmente útil para redefinir ambientes de desenvolvimento ou liberar espaço em disco.
+This code is a Python utility for uninstalling all installed Python packages in the current environment and clearing the pip cache. It is especially useful for resetting development environments or freeing up disk space.
 
 ---
 
-### Descrição do Código
+### Code Description
 
-#### Objetivo
-O script automatiza dois processos comuns para desenvolvedores ou administradores de sistemas que desejam redefinir ou limpar o ambiente Python:
+#### Objective
+The script automates two common processes for developers or system administrators who want to reset or clean the Python environment:
 
-1. **Desinstalar todos os pacotes Python instalados:**
-   - Utiliza o comando `pip freeze` para listar os pacotes instalados e, em seguida, desinstala cada um deles.
-   - A desinstalação é feita automaticamente, sem solicitar confirmações, graças ao uso do parâmetro `-y`.
+1. **Uninstall all installed Python packages:**
+   - Uses the `pip freeze` command to list installed packages and then uninstalls each one.
+   - The uninstallation is done automatically without asking for confirmations, thanks to the `-y` parameter.
 
-2. **Limpar o cache do pip:**
-   - Remove os arquivos temporários armazenados pelo pip, economizando espaço em disco e garantindo um ambiente mais limpo.
-
----
-
-#### Componentes Principais
-
-1. **Função `uninstall_all_packages`:**
-   - Lista todos os pacotes instalados usando `pip freeze`.
-   - Desinstala cada pacote identificado.
-   - Trata erros que possam ocorrer durante a listagem ou desinstalação.
-
-2. **Função `clear_pip_cache`:**
-   - Executa o comando `pip cache purge` para limpar os arquivos em cache.
-   - Exibe mensagens informando o sucesso ou falha na operação.
-
-3. **Bloco Principal (`if __name__ == "__main__"`):**
-   - Chama as funções em sequência: primeiro desinstala os pacotes, depois limpa o cache.
-   - Exibe mensagens de status para informar o progresso.
+2. **Clear the pip cache:**
+   - Removes the temporary files stored by pip, saving disk space and ensuring a cleaner environment.
 
 ---
 
-#### Aplicação Prática
-Este script é útil para:
-- Redefinir ambientes Python em máquinas de desenvolvimento ou produção.
-- Limpar o ambiente antes de configurar novos pacotes ou dependências.
-- Economizar espaço em disco ao remover pacotes desnecessários e arquivos em cache.
+#### Key Components
 
-#### Aviso
-**Atenção:** Este código remove todos os pacotes instalados no ambiente Python, podendo causar impactos em sistemas configurados ou em desenvolvimento. Use-o com cautela e preferencialmente em ambientes isolados (como virtualenvs ou containers).
+1. **Function `uninstall_all_packages`:**
+   - Lists all installed packages using `pip freeze`.
+   - Uninstalls each identified package.
+   - Handles errors that may occur during listing or uninstallation.
+
+2. **Function `clear_pip_cache`:**
+   - Executes the `pip cache purge` command to clear cache files.
+   - Displays messages indicating the success or failure of the operation.
+
+3. **Main Block (`if __name__ == "__main__"`):**
+   - Calls the functions in sequence: first uninstalls the packages, then clears the cache.
+   - Displays status messages to inform progress.
+
+---
+
+#### Practical Application
+This script is useful for:
+- Resetting Python environments on development or production machines.
+- Cleaning the environment before setting up new packages or dependencies.
+- Saving disk space by removing unnecessary packages and cache files.
+
+#### Warning
+**Attention:** This code removes all installed packages in the Python environment, which can impact configured or in-development systems. Use it with caution and preferably in isolated environments (such as virtualenvs or containers).
